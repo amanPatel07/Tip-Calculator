@@ -1,0 +1,13 @@
+.content-heading {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    letter-spacing: 12px;
+}
+
+.calc-wrapper {
+    @include border-radius(30px);
+
+    .main-calc {
+        @include border-radius(15px)
+    }
+}
