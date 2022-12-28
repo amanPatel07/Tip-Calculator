@@ -5,6 +5,8 @@ import { TipCalculatorRoutingModule } from './tip-calculator-routing.module';
 import { TipCalculatorComponent } from './tip-calculator.component';
 import { TipCalContainerComponent } from './tip-cal-container/tip-cal-container.component';
 import { TipCalPresentationComponent } from './tip-cal-container/tip-cal-presentation/tip-cal-presentation.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TipCalPresenterService } from './tip-cal-container/tip-cal-presenter/tip-cal-presenter.service';
 
 
 @NgModule({
@@ -15,7 +17,11 @@ import { TipCalPresentationComponent } from './tip-cal-container/tip-cal-present
   ],
   imports: [
     CommonModule,
-    TipCalculatorRoutingModule
+    TipCalculatorRoutingModule,
+    ReactiveFormsModule
+  ],
+  providers: [
+    TipCalPresenterService
   ]
 })
 export class TipCalculatorModule { }
