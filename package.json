@@ -1,6 +1,7 @@
 {
   "name": "tip-calculator",
   "version": "0.0.0",
+  "homepage" : "http://amanPatel07.github.io/Tip-Calculator",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
