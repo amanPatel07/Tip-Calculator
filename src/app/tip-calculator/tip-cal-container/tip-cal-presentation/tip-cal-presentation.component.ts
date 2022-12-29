@@ -29,6 +29,10 @@ export class TipCalPresentationComponent implements OnInit {
     this.valueChange();
   }
 
+  public get getControls() {
+    return this.tipCalcForm['controls']
+  }
+
   public valueChange() {
     this.tipCalcForm.valueChanges.subscribe((res: any) => {
       this.totalBill = res.bill || 0;
@@ -42,7 +46,7 @@ export class TipCalPresentationComponent implements OnInit {
     let billAmount, tipAmount;
     tipAmount = this.totalBill * (this.tip / 100)
     billAmount = this.totalBill + tipAmount;
-    this.totalAmountPerPerson = billAmount / this.numberOfPeople;
+    this.totalAmountPerPerson = (billAmount / this.numberOfPeople);
     this.tipAmountPerPerson = tipAmount / this.numberOfPeople;
 
     if(this.totalAmountPerPerson == Infinity || Number.isNaN(this.totalAmountPerPerson)) this.totalAmountPerPerson = 0;

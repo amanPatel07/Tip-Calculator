@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { max, min } from 'rxjs';
 
 @Injectable()
 export class TipCalPresenterService {
@@ -9,7 +10,7 @@ export class TipCalPresenterService {
   public buildform() {
     return this.fb.group({
       bill: [''],
-      tip: [''],
+      tip: ['', [Validators.required, Validators.maxLength(5)]],
       numberOfPeople: ['']
     })
   }

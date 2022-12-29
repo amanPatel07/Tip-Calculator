@@ -47,7 +47,7 @@ input::-webkit-inner-spin-button {
         font-weight: $font-weight-bold;
     }
 
-    .calc-reset-btn{
+    .calc-reset-btn {
 
         background-color: $primary;
         color: $secondary;
@@ -58,10 +58,20 @@ input::-webkit-inner-spin-button {
         }
     }
 
-    .invalid{
+    .invalid {
         display: block;
         color: $inValid;
     }
 
-    
+    .invalid-input {
+        border: 2px solid $inValid;
+    }
+
+
+
+}
+
+input[type="radio"]:checked+.active {
+    background-color: $info;
+    color: $secondary;
 }
