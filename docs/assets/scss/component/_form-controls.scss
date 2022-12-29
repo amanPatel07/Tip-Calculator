@@ -1,0 +1,77 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.calc-wrapper {
+    .form-control {
+        border: none;
+        font-size: 1.5rem;
+        font-weight: $font-weight-bold;
+        color: $secondary;
+        cursor: pointer;
+    }
+
+    .bill-amount {
+        background: url("../../images/icon-dollar.svg") no-repeat;
+        background-position: 5% 50%;
+    }
+
+    .number-of-people {
+        background: url("../../images/icon-person.svg") no-repeat;
+        background-position: 5% 50%;
+    }
+
+    .tip-count {
+        width: 100%;
+        background-color: $secondary;
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+        font-weight: $font-weight-bold;
+        color: $white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $info;
+            color: $secondary;
+        }
+    }
+
+    .custom-tip {
+        border: none;
+        width: 100%;
+        background-color: $white;
+        padding: 0.5rem 0.5rem;
+        font-size: 1.5rem;
+        font-weight: $font-weight-bold;
+    }
+
+    .calc-reset-btn {
+
+        background-color: $primary;
+        color: $secondary;
+
+        &:hover {
+            background-color: $info;
+            color: $secondary;
+        }
+    }
+
+    .invalid {
+        display: block;
+        color: $inValid;
+    }
+
+    .invalid-input {
+        border: 2px solid $inValid;
+    }
+
+
+
+}
+
+input[type="radio"]:checked+.active {
+    background-color: $info;
+    color: $secondary;
+}
